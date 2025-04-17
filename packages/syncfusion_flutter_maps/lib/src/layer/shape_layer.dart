@@ -1379,7 +1379,7 @@ class _GeoJSONLayerState extends State<GeoJSONLayer>
       legendTextStyle: themeData.textTheme.bodySmall!
           .copyWith(
               color:
-                  themeData.textTheme.bodySmall!.color!.withValues(alpha: 0.87))
+                  themeData.textTheme.bodySmall!.color!.withOpacity( 0.87))
           .merge(mapsThemeData.legendTextStyle)
           .merge(widget.legend?.textStyle),
       markerIconColor:

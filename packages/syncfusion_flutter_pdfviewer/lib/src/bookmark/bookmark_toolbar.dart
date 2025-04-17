@@ -127,8 +127,8 @@ class _BookmarkToolbarState extends State<BookmarkToolbar> {
                     .copyWith(
                       fontSize: 16,
                       color: Theme.of(context).brightness == Brightness.light
-                          ? Colors.black.withValues(alpha: 0.87)
-                          : Colors.white.withValues(alpha: 0.87),
+                          ? Colors.black.withOpacity( 0.87)
+                          : Colors.white.withOpacity( 0.87),
                     )
                     .merge(
                       _pdfViewerThemeData!.bookmarkViewStyle?.headerTextStyle ??
@@ -156,7 +156,7 @@ class _BookmarkToolbarState extends State<BookmarkToolbar> {
                       _effectiveThemeData!.bookmarkViewStyle?.closeIconColor ??
                       Theme.of(
                         context,
-                      ).colorScheme.onSurface.withValues(alpha: 0.54),
+                      ).colorScheme.onSurface.withOpacity( 0.54),
                   semanticLabel: 'Close Bookmark',
                 ),
               ),

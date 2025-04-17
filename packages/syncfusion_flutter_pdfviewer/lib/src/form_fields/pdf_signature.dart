@@ -155,17 +155,17 @@ class PdfSignatureFormFieldHelper extends PdfFormFieldHelper {
         fillColor: pdfSignatureField.backColor.isEmpty
             ? const Color.fromARGB(255, 221, 228, 255)
             : Color.fromRGBO(
-                pdfSignatureField.backColor.r,
-                pdfSignatureField.backColor.g,
-                pdfSignatureField.backColor.b,
+                pdfSignatureField.backColor.red,
+                pdfSignatureField.backColor.green,
+                pdfSignatureField.backColor.blue,
                 1,
               ),
         borderColor: pdfSignatureField.borderColor.isEmpty
             ? Colors.transparent
             : Color.fromRGBO(
-                pdfSignatureField.borderColor.r,
-                pdfSignatureField.borderColor.g,
-                pdfSignatureField.borderColor.b,
+                pdfSignatureField.borderColor.red,
+                pdfSignatureField.borderColor.green,
+                pdfSignatureField.borderColor.blue,
                 1,
               ),
         borderWidth: pdfSignatureField.borderWidth / heightPercentage,
@@ -422,8 +422,8 @@ void _showSignaturePadDialog(
                                 fontFamily: 'Roboto-Medium',
                                 color: Theme.of(context).brightness ==
                                         Brightness.light
-                                    ? Colors.black.withValues(alpha: 0.87)
-                                    : Colors.white.withValues(alpha: 0.87),
+                                    ? Colors.black.withOpacity( 0.87)
+                                    : Colors.white.withOpacity( 0.87),
                               ),
                     ),
                     InkWell(
@@ -515,9 +515,9 @@ void _showSignaturePadDialog(
                                         : Theme.of(context).brightness ==
                                                 Brightness.light
                                             ? Colors.black
-                                                .withValues(alpha: 0.87)
+                                                .withOpacity( 0.87)
                                             : Colors.white
-                                                .withValues(alpha: 0.87),
+                                                .withOpacity( 0.87),
                                   ),
                             ),
                             SizedBox(

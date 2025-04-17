@@ -228,7 +228,7 @@ class RenderLinearAxis extends RenderBox {
         _factorToValueCallback = factorToValueCallback,
         _valueToFactorCallback = valueToFactorCallback {
     _axisPaint = Paint()
-      ..color = Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.12);
+      ..color = Theme.of(context).colorScheme.onSurface.withOpacity( 0.12);
     _textPainter = TextPainter(textDirection: TextDirection.ltr);
     _visibleLabels = <LinearAxisLabel>[];
     _isHorizontalOrientation = orientation == LinearGaugeOrientation.horizontal;
@@ -1343,7 +1343,7 @@ class RenderLinearAxis extends RenderBox {
     }
 
     _axisPaint.color =
-        paintColor.withValues(alpha: animationValue * paintColor.a);
+        paintColor.withOpacity( animationValue * paintColor.alpha);
   }
 
   ///Draws minor tick elements.
@@ -1411,7 +1411,7 @@ class RenderLinearAxis extends RenderBox {
     }
 
     if (color != null) {
-      color = color.withValues(alpha: animationValue * color.a);
+      color = color.withOpacity( animationValue * color.alpha);
     }
 
     return dart_ui.TextStyle(

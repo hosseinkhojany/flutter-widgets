@@ -314,11 +314,11 @@ class RenderStickyNoteAnnotationView extends RenderInteractiveGraphicsView {
 
   void _drawStickyNoteIcon(Canvas canvas, Offset offset) {
     final Paint fillPaint = Paint();
-    fillPaint.color = color.withValues(alpha: opacity);
+    fillPaint.color = color.withOpacity( opacity);
     fillPaint.style = PaintingStyle.fill;
 
     final Paint strokePaint = Paint()
-      ..color = Colors.black.withValues(alpha: opacity)
+      ..color = Colors.black.withOpacity( opacity)
       ..strokeWidth = 1.5
       ..style = PaintingStyle.stroke;
 

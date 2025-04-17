@@ -8,9 +8,9 @@ Color _saturatedColor(Color color, double factor) {
     const Color mix = Color(0x4D000000);
     final double mixFactor = 1 - factor;
     return Color.fromRGBO(
-      (mixFactor * (color.r * 255) + factor * (mix.r * 255)).toInt(),
-      (mixFactor * (color.g * 255) + factor * (mix.g * 255)).toInt(),
-      (mixFactor * (color.b * 255) + factor * (mix.b * 255)).toInt(),
+      (mixFactor * (color.red * 255) + factor * (mix.red * 255)).toInt(),
+      (mixFactor * (color.green * 255) + factor * (mix.green * 255)).toInt(),
+      (mixFactor * (color.blue * 255) + factor * (mix.blue * 255)).toInt(),
       1,
     );
   }
@@ -41,23 +41,23 @@ class AIAssistViewM2ThemeData extends SfAIAssistViewThemeData {
 
   @override
   Color? get actionButtonFocusColor =>
-      _colorScheme.primary.withValues(alpha: 0.86);
+      _colorScheme.primary.withOpacity( 0.86);
 
   @override
   Color? get actionButtonHoverColor =>
-      _colorScheme.primary.withValues(alpha: 0.91);
+      _colorScheme.primary.withOpacity( 0.91);
 
   @override
   Color? get actionButtonSplashColor =>
-      _colorScheme.primary.withValues(alpha: 0.86);
+      _colorScheme.primary.withOpacity( 0.86);
 
   @override
   Color? get actionButtonDisabledForegroundColor =>
-      _colorScheme.onSurface.withValues(alpha: 0.38);
+      _colorScheme.onSurface.withOpacity( 0.38);
 
   @override
   Color? get actionButtonDisabledBackgroundColor =>
-      _colorScheme.surface.withValues(alpha: 0.12);
+      _colorScheme.surface.withOpacity( 0.12);
 
   @override
   ShapeBorder? get actionButtonShape => const RoundedRectangleBorder(
@@ -105,11 +105,11 @@ class AIAssistViewM2ThemeData extends SfAIAssistViewThemeData {
         (Set<WidgetState> states) {
           if (states.contains(WidgetState.hovered) ||
               states.contains(WidgetState.focused)) {
-            return _colorScheme.onSurface.withValues(alpha: 0.08);
+            return _colorScheme.onSurface.withOpacity( 0.08);
           }
           if (states.contains(WidgetState.pressed) ||
               states.contains(WidgetState.selected)) {
-            return _colorScheme.onSurface.withValues(alpha: 0.01);
+            return _colorScheme.onSurface.withOpacity( 0.01);
           }
           return _colorScheme.surface;
         },
@@ -129,7 +129,7 @@ class AIAssistViewM2ThemeData extends SfAIAssistViewThemeData {
         (Set<WidgetState> states) {
           if (states.contains(WidgetState.disabled)) {
             return TextStyle(
-              color: _colorScheme.onSurface.withValues(alpha: 0.38),
+              color: _colorScheme.onSurface.withOpacity( 0.38),
             );
           }
           return TextStyle(color: _colorScheme.onSurface);
@@ -162,23 +162,23 @@ class AIAssistViewM3ThemeData extends SfAIAssistViewThemeData {
 
   @override
   Color? get actionButtonFocusColor =>
-      _colorScheme.primary.withValues(alpha: 0.86);
+      _colorScheme.primary.withOpacity( 0.86);
 
   @override
   Color? get actionButtonHoverColor =>
-      _colorScheme.primary.withValues(alpha: 0.91);
+      _colorScheme.primary.withOpacity( 0.91);
 
   @override
   Color? get actionButtonSplashColor =>
-      _colorScheme.primary.withValues(alpha: 0.86);
+      _colorScheme.primary.withOpacity( 0.86);
 
   @override
   Color? get actionButtonDisabledForegroundColor =>
-      _colorScheme.onSurface.withValues(alpha: 0.38);
+      _colorScheme.onSurface.withOpacity( 0.38);
 
   @override
   Color? get actionButtonDisabledBackgroundColor =>
-      _colorScheme.surface.withValues(alpha: 0.12);
+      _colorScheme.surface.withOpacity( 0.12);
 
   @override
   ShapeBorder? get actionButtonShape => const RoundedRectangleBorder(
@@ -226,11 +226,11 @@ class AIAssistViewM3ThemeData extends SfAIAssistViewThemeData {
         (Set<WidgetState> states) {
           if (states.contains(WidgetState.hovered) ||
               states.contains(WidgetState.focused)) {
-            return _colorScheme.onSurface.withValues(alpha: 0.08);
+            return _colorScheme.onSurface.withOpacity( 0.08);
           }
           if (states.contains(WidgetState.pressed) ||
               states.contains(WidgetState.selected)) {
-            return _colorScheme.onSurface.withValues(alpha: 0.01);
+            return _colorScheme.onSurface.withOpacity( 0.01);
           }
           return _colorScheme.surface;
         },
@@ -250,7 +250,7 @@ class AIAssistViewM3ThemeData extends SfAIAssistViewThemeData {
         (Set<WidgetState> states) {
           if (states.contains(WidgetState.disabled)) {
             return TextStyle(
-              color: _colorScheme.onSurface.withValues(alpha: 0.38),
+              color: _colorScheme.onSurface.withOpacity( 0.38),
             );
           }
           return TextStyle(color: _colorScheme.onSurface);

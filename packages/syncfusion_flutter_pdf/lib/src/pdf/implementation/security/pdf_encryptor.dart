@@ -696,7 +696,7 @@ class PdfEncryptor {
     _permissionValue = dictionary.getInt(PdfDictionaryProperties.p);
     _updatePermissions(_permissionValue! & ~_permissionSet!);
     _versionNumberOut = dictionary.getInt(PdfDictionaryProperties.v);
-    _revisionNumberOut = dictionary.getInt(PdfDictionaryProperties.r);
+    _revisionNumberOut = dictionary.getInt(PdfDictionaryProperties.red);
     if (_revisionNumberOut != null) {
       _revision = _revisionNumberOut;
     }
@@ -1193,14 +1193,14 @@ class PdfEncryptor {
     if (encryptionAlgorithm == PdfEncryptionAlgorithm.aesx128Bit ||
         encryptionAlgorithm == PdfEncryptionAlgorithm.aesx256Bit ||
         encryptionAlgorithm == PdfEncryptionAlgorithm.aesx256BitRevision6) {
-      dictionary[PdfDictionaryProperties.r] = PdfNumber(_getKeySize() + 3);
+      dictionary[PdfDictionaryProperties.red] = PdfNumber(_getKeySize() + 3);
       dictionary[PdfDictionaryProperties.v] = PdfNumber(_getKeySize() + 3);
       if (encryptionAlgorithm == PdfEncryptionAlgorithm.aesx256BitRevision6) {
         dictionary[PdfDictionaryProperties.v] = PdfNumber(5);
-        dictionary[PdfDictionaryProperties.r] = PdfNumber(6);
+        dictionary[PdfDictionaryProperties.red] = PdfNumber(6);
       } else if (encryptionAlgorithm == PdfEncryptionAlgorithm.aesx256Bit) {
         dictionary[PdfDictionaryProperties.v] = PdfNumber(5);
-        dictionary[PdfDictionaryProperties.r] = PdfNumber(5);
+        dictionary[PdfDictionaryProperties.red] = PdfNumber(5);
       }
       if (encryptAttachmentOnly!) {
         dictionary[PdfDictionaryProperties.stmF] =
@@ -1241,7 +1241,7 @@ class PdfEncryptor {
             PdfString.fromBytes(_permissionFlag);
       }
     } else {
-      dictionary[PdfDictionaryProperties.r] = PdfNumber(
+      dictionary[PdfDictionaryProperties.red] = PdfNumber(
           (_revisionNumberOut! > 0 && !isAes4Dict)
               ? _revisionNumberOut!
               : (_getKeySize() + 2));
@@ -1284,14 +1284,14 @@ class PdfEncryptor {
     if (encryptionAlgorithm == PdfEncryptionAlgorithm.aesx128Bit ||
         encryptionAlgorithm == PdfEncryptionAlgorithm.aesx256Bit ||
         encryptionAlgorithm == PdfEncryptionAlgorithm.aesx256BitRevision6) {
-      dictionary[PdfDictionaryProperties.r] = PdfNumber(_getKeySize() + 3);
+      dictionary[PdfDictionaryProperties.red] = PdfNumber(_getKeySize() + 3);
       dictionary[PdfDictionaryProperties.v] = PdfNumber(_getKeySize() + 3);
       if (encryptionAlgorithm == PdfEncryptionAlgorithm.aesx256BitRevision6) {
         dictionary[PdfDictionaryProperties.v] = PdfNumber(5);
-        dictionary[PdfDictionaryProperties.r] = PdfNumber(6);
+        dictionary[PdfDictionaryProperties.red] = PdfNumber(6);
       } else if (encryptionAlgorithm == PdfEncryptionAlgorithm.aesx256Bit) {
         dictionary[PdfDictionaryProperties.v] = PdfNumber(5);
-        dictionary[PdfDictionaryProperties.r] = PdfNumber(5);
+        dictionary[PdfDictionaryProperties.red] = PdfNumber(5);
       }
       if (encryptAttachmentOnly!) {
         dictionary[PdfDictionaryProperties.stmF] =
@@ -1333,7 +1333,7 @@ class PdfEncryptor {
             PdfString.fromBytes(_permissionFlag);
       }
     } else {
-      dictionary[PdfDictionaryProperties.r] = PdfNumber(
+      dictionary[PdfDictionaryProperties.red] = PdfNumber(
           (_revisionNumberOut! > 0 && !isAes4Dict)
               ? _revisionNumberOut!
               : (_getKeySize() + 2));

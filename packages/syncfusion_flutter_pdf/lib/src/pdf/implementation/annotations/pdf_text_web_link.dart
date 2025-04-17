@@ -218,9 +218,9 @@ class PdfTextWebLink extends PdfAnnotation {
     if (PdfAnnotationHelper.getHelper(this).isLoadedAnnotation) {
       final PdfDictionary tempDictionary =
           PdfAnnotationHelper.getHelper(this).dictionary!;
-      if (tempDictionary.containsKey(PdfDictionaryProperties.a)) {
+      if (tempDictionary.containsKey(PdfDictionaryProperties.alpha)) {
         final PdfDictionary? dictionary =
-            PdfCrossTable.dereference(tempDictionary[PdfDictionaryProperties.a])
+            PdfCrossTable.dereference(tempDictionary[PdfDictionaryProperties.alpha])
                 as PdfDictionary?;
         if (dictionary != null) {
           dictionary.setString(PdfDictionaryProperties.uri, _url);
@@ -292,9 +292,9 @@ class PdfTextWebLink extends PdfAnnotation {
     String? url = '';
     final PdfDictionary tempDictionary =
         PdfAnnotationHelper.getHelper(this).dictionary!;
-    if (tempDictionary.containsKey(PdfDictionaryProperties.a)) {
+    if (tempDictionary.containsKey(PdfDictionaryProperties.alpha)) {
       final PdfDictionary? dictionary =
-          PdfCrossTable.dereference(tempDictionary[PdfDictionaryProperties.a])
+          PdfCrossTable.dereference(tempDictionary[PdfDictionaryProperties.alpha])
               as PdfDictionary?;
       if (dictionary != null &&
           dictionary.containsKey(PdfDictionaryProperties.uri)) {

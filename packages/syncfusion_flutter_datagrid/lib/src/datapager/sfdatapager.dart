@@ -940,9 +940,9 @@ class SfDataPagerState extends State<SfDataPager> {
           color: visible
               ? colorScheme.brightness == Brightness.light
                   ? _dataPagerThemeHelper!.disabledItemTextStyle!.color
-                      ?.withValues(alpha: 0.54)
+                      ?.withOpacity( 0.54)
                   : _dataPagerThemeHelper!.disabledItemTextStyle!.color
-                      ?.withValues(alpha: 0.65)
+                      ?.withOpacity( 0.65)
               : _dataPagerThemeHelper!.disabledItemTextStyle!.color);
     }
 

@@ -121,17 +121,17 @@ class PdfRadioFormFieldHelper extends PdfFormFieldHelper {
             fillColor: pdfRadioField.items[j].backColor.isEmpty
                 ? const Color.fromARGB(255, 221, 228, 255)
                 : Color.fromRGBO(
-                    pdfRadioField.items[j].backColor.r,
-                    pdfRadioField.items[j].backColor.g,
-                    pdfRadioField.items[j].backColor.b,
+                    pdfRadioField.items[j].backColor.red,
+                    pdfRadioField.items[j].backColor.green,
+                    pdfRadioField.items[j].backColor.blue,
                     1,
                   ),
             borderColor: pdfRadioField.items[j].borderColor.isEmpty
                 ? Colors.transparent
                 : Color.fromRGBO(
-                    pdfRadioField.items[j].borderColor.r,
-                    pdfRadioField.items[j].borderColor.g,
-                    pdfRadioField.items[j].borderColor.b,
+                    pdfRadioField.items[j].borderColor.red,
+                    pdfRadioField.items[j].borderColor.green,
+                    pdfRadioField.items[j].borderColor.blue,
                     1,
                   ),
             borderWidth: pdfRadioField.items[j].borderWidth / heightPercentage,

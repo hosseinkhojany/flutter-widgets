@@ -196,8 +196,8 @@ class JsonDocument {
             table['encoding'] = encoding!;
           }
         }
-        if (sound.containsKey(PdfDictionaryProperties.r)) {
-          final String? rate = _getValue(sound[PdfDictionaryProperties.r]);
+        if (sound.containsKey(PdfDictionaryProperties.red)) {
+          final String? rate = _getValue(sound[PdfDictionaryProperties.red]);
           if (!isNullOrEmpty(rate)) {
             table['rate'] = rate!;
           }
@@ -900,8 +900,8 @@ class JsonDocument {
       case 'Sound':
         break;
       case PdfDictionaryProperties.border:
-      case PdfDictionaryProperties.a:
-      case PdfDictionaryProperties.r:
+      case PdfDictionaryProperties.alpha:
+      case PdfDictionaryProperties.red:
       case PdfDictionaryProperties.x:
         final String? value = _getValue(primitive);
         if (!isNullOrEmpty(value)) {
@@ -957,8 +957,8 @@ class JsonDocument {
       if (mdictionary.containsKey(PdfDictionaryProperties.type)) {
         table['type1'] = 'Measure';
       }
-      if (mdictionary.containsKey(PdfDictionaryProperties.r)) {
-        final String? value = _getValue(mdictionary[PdfDictionaryProperties.r]);
+      if (mdictionary.containsKey(PdfDictionaryProperties.red)) {
+        final String? value = _getValue(mdictionary[PdfDictionaryProperties.red]);
         if (!isNullOrEmpty(value)) {
           table['ratevalue'] = value!;
         }
@@ -976,8 +976,8 @@ class JsonDocument {
           table['TargetUnitConversion'] = value!;
         }
       }
-      if (mdictionary.containsKey(PdfDictionaryProperties.a)) {
-        final IPdfPrimitive? aArray = mdictionary[PdfDictionaryProperties.a];
+      if (mdictionary.containsKey(PdfDictionaryProperties.alpha)) {
+        final IPdfPrimitive? aArray = mdictionary[PdfDictionaryProperties.alpha];
         if (aArray != null &&
             aArray is PdfArray &&
             aArray.elements.isNotEmpty) {

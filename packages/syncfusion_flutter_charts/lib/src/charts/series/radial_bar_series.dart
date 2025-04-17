@@ -334,10 +334,10 @@ class RadialBarSeriesRenderer<T, D> extends CircularSeriesRenderer<T, D> {
       if (trackColor != Colors.transparent) {
         if (useSeriesColor) {
           segment.trackFillPaint.color =
-              segment.fillPaint.color.withValues(alpha: trackOpacity);
+              segment.fillPaint.color.withOpacity(trackOpacity);
         } else {
           segment.trackFillPaint.color =
-              trackColor.withValues(alpha: trackOpacity);
+              trackColor.withOpacity(trackOpacity);
         }
       } else {
         if (useSeriesColor) {

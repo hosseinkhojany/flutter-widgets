@@ -114,17 +114,17 @@ class PdfComboBoxFormFieldHelper extends PdfFormFieldHelper {
         fillColor: pdfComboBoxField.backColor.isEmpty
             ? const Color.fromARGB(255, 221, 228, 255)
             : Color.fromRGBO(
-                pdfComboBoxField.backColor.r,
-                pdfComboBoxField.backColor.g,
-                pdfComboBoxField.backColor.b,
+                pdfComboBoxField.backColor.red,
+                pdfComboBoxField.backColor.green,
+                pdfComboBoxField.backColor.blue,
                 1,
               ),
         borderColor: pdfComboBoxField.borderColor.isEmpty
             ? Colors.transparent
             : Color.fromRGBO(
-                pdfComboBoxField.borderColor.r,
-                pdfComboBoxField.borderColor.g,
-                pdfComboBoxField.borderColor.b,
+                pdfComboBoxField.borderColor.red,
+                pdfComboBoxField.borderColor.green,
+                pdfComboBoxField.borderColor.blue,
                 1,
               ),
         borderWidth: pdfComboBoxField.borderWidth / heightPercentage,

@@ -516,8 +516,8 @@ class ScrollHeadOverlayState extends State<ScrollHeadOverlay> {
                         color: isMaterial3
                             ? Theme.of(context).colorScheme.onSurface
                             : Theme.of(context).brightness == Brightness.light
-                                ? Colors.black.withValues(alpha: 0.87)
-                                : Colors.white.withValues(alpha: 0.87),
+                                ? Colors.black.withOpacity( 0.87)
+                                : Colors.white.withOpacity( 0.87),
                       )
                       .merge(
                         _pdfViewerThemeData!
@@ -641,8 +641,8 @@ class ScrollHeadOverlayState extends State<ScrollHeadOverlay> {
               .copyWith(
                 fontSize: 16,
                 color: Theme.of(context).brightness == Brightness.light
-                    ? Colors.black.withValues(alpha: 0.87)
-                    : Colors.white.withValues(alpha: 0.87),
+                    ? Colors.black.withOpacity( 0.87)
+                    : Colors.white.withOpacity( 0.87),
               )
               .merge(
                 _pdfViewerThemeData!.paginationDialogStyle?.inputFieldTextStyle,
@@ -699,8 +699,8 @@ class ScrollHeadOverlayState extends State<ScrollHeadOverlay> {
                 .copyWith(
                   fontSize: 16,
                   color: Theme.of(context).brightness == Brightness.light
-                      ? Colors.black.withValues(alpha: 0.6)
-                      : Colors.white.withValues(alpha: 0.6),
+                      ? Colors.black.withOpacity( 0.6)
+                      : Colors.white.withOpacity( 0.6),
                 )
                 .merge(
                   _pdfViewerThemeData!.paginationDialogStyle?.hintTextStyle,
@@ -714,8 +714,8 @@ class ScrollHeadOverlayState extends State<ScrollHeadOverlay> {
                 .copyWith(
                   fontSize: 12,
                   color: Theme.of(context).brightness == Brightness.light
-                      ? Colors.black.withValues(alpha: 0.6)
-                      : Colors.white.withValues(alpha: 0.6),
+                      ? Colors.black.withOpacity( 0.6)
+                      : Colors.white.withOpacity( 0.6),
                 )
                 .merge(
                   _pdfViewerThemeData!.paginationDialogStyle?.pageInfoTextStyle,

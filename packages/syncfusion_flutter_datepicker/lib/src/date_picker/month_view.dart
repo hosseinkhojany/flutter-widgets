@@ -4236,9 +4236,9 @@ void _drawMonthCellsAndSelection(PaintingContext context, Size size,
             monthView._selectionPainter.style = PaintingStyle.fill;
             monthView._selectionPainter.strokeWidth = 2;
             monthView._selectionPainter.color = monthView.selectionColor != null
-                ? monthView.selectionColor!.withValues(alpha: 0.4)
+                ? monthView.selectionColor!.withOpacity( 0.4)
                 : monthView.datePickerTheme.selectionColor!
-                    .withValues(alpha: 0.4);
+                    .withOpacity( 0.4);
             canvas.drawRRect(
                 RRect.fromRectAndRadius(
                     Rect.fromLTWH(xPosition, yPosition, cellWidth, cellHeight),
@@ -4679,8 +4679,8 @@ void _addRangeHoverEffect(Canvas canvas, double xPosition, double yPosition,
   monthView._selectionPainter.style = PaintingStyle.stroke;
   monthView._selectionPainter.strokeWidth = 1.0;
   monthView._selectionPainter.color = monthView.selectionColor != null
-      ? monthView.selectionColor!.withValues(alpha: 0.4)
-      : monthView.datePickerTheme.selectionColor!.withValues(alpha: 0.4);
+      ? monthView.selectionColor!.withOpacity( 0.4)
+      : monthView.datePickerTheme.selectionColor!.withOpacity( 0.4);
   DateRangePickerHelper.drawDashedLine(
       rect.left, rect.top, rect.right, canvas, monthView._selectionPainter);
   DateRangePickerHelper.drawDashedLine(
@@ -4697,8 +4697,8 @@ void _addHoveringEffect(Canvas canvas, _IMonthView monthView, double xPosition,
     monthView._selectionPainter.style = PaintingStyle.fill;
     monthView._selectionPainter.strokeWidth = 2;
     monthView._selectionPainter.color = monthView.selectionColor != null
-        ? monthView.selectionColor!.withValues(alpha: 0.4)
-        : monthView.datePickerTheme.selectionColor!.withValues(alpha: 0.4);
+        ? monthView.selectionColor!.withOpacity( 0.4)
+        : monthView.datePickerTheme.selectionColor!.withOpacity( 0.4);
     switch (monthView.selectionShape) {
       case DateRangePickerSelectionShape.circle:
         {

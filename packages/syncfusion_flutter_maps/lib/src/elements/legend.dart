@@ -2407,7 +2407,7 @@ class _LegendState extends State<Legend> {
   Color? _getEffectiveToggledItemColor() {
     if (widget.themeData.toggledItemColor != Colors.transparent) {
       return widget.themeData.toggledItemColor!
-          .withValues(alpha: widget.legend.toggledItemOpacity);
+          .withOpacity( widget.legend.toggledItemOpacity);
     }
     return widget.themeData.toggledItemColor;
   }

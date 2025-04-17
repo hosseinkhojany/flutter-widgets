@@ -3866,7 +3866,7 @@ abstract class _PlotBandRenderer {
           paint.shader = plotBand.gradient!.createShader(bounds);
         } else {
           if (plotBand.opacity < 1.0) {
-            paint.color = plotBand.color.withValues(alpha: plotBand.opacity);
+            paint.color = plotBand.color.withOpacity(plotBand.opacity);
           } else {
             paint.color = plotBand.color;
           }
@@ -3880,7 +3880,7 @@ abstract class _PlotBandRenderer {
             plotBand.borderColor != Colors.transparent) {
           paint
             ..color = plotBand.opacity < 1.0
-                ? plotBand.borderColor.withValues(alpha: plotBand.opacity)
+                ? plotBand.borderColor.withOpacity(plotBand.opacity)
                 : plotBand.borderColor
             ..strokeWidth = plotBand.borderWidth
             ..style = PaintingStyle.stroke;
@@ -3947,7 +3947,7 @@ class _HorizontalPlotBandRenderer extends _PlotBandRenderer {
       TextStyle style = plotBand.textStyle;
       if (plotBand.opacity < 1.0) {
         style = style.copyWith(
-            color: style.color?.withValues(alpha: plotBand.opacity));
+            color: style.color?.withOpacity(plotBand.opacity));
       }
       final TextSpan span = TextSpan(text: plotBand.text, style: style);
       _textPainter
@@ -3982,7 +3982,7 @@ class _VerticalPlotBandRenderer extends _PlotBandRenderer {
       TextStyle style = plotBand.textStyle;
       if (plotBand.opacity < 1.0) {
         style = style.copyWith(
-            color: style.color?.withValues(alpha: plotBand.opacity));
+            color: style.color?.withOpacity(plotBand.opacity));
       }
       final TextSpan span = TextSpan(text: plotBand.text, style: style);
       _textPainter

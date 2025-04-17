@@ -372,7 +372,7 @@ class PdfColorHelper {
 
   /// Sets RGB color.
   String _rgbToString(bool ifStroking) {
-    int key = (base.r << 16) + (base.g << 8) + base.b;
+    int key = (base.red << 16) + (base.green << 8) + base.blue;
     if (ifStroking) {
       key += 1 << 24;
     }
@@ -382,9 +382,9 @@ class PdfColorHelper {
       obj = base._rgbStrings[key];
     }
     if (obj == null) {
-      dynamic red = base.r / base._maxColourChannelValue;
-      dynamic green = base.g / base._maxColourChannelValue;
-      dynamic blue = base.b / base._maxColourChannelValue;
+      dynamic red = base.red / base._maxColourChannelValue;
+      dynamic green = base.green / base._maxColourChannelValue;
+      dynamic blue = base.blue / base._maxColourChannelValue;
       red = red % 1 == 0 ? red.toInt() : red;
       green = green % 1 == 0 ? green.toInt() : green;
       blue = blue % 1 == 0 ? blue.toInt() : blue;

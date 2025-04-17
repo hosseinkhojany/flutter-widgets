@@ -225,9 +225,9 @@ class PdfButtonFieldHelper extends PdfFieldHelper {
         final PdfDictionary buttonDictionary =
             buttonObject.object! as PdfDictionary;
         buttonDictionary.setProperty(
-            PdfDictionaryProperties.a, actionDictionary);
+            PdfDictionaryProperties.alpha, actionDictionary);
       } else {
-        dictionary!.setProperty(PdfDictionaryProperties.a, actionDictionary);
+        dictionary!.setProperty(PdfDictionaryProperties.alpha, actionDictionary);
       }
     } else {
       final PdfArray kidsArray =
@@ -236,7 +236,7 @@ class PdfButtonFieldHelper extends PdfFieldHelper {
           kidsArray[0]! as PdfReferenceHolder;
       final PdfDictionary buttonDictionary =
           buttonObject.object! as PdfDictionary;
-      buttonDictionary.setProperty(PdfDictionaryProperties.a, actionDictionary);
+      buttonDictionary.setProperty(PdfDictionaryProperties.alpha, actionDictionary);
     }
   }
 
@@ -454,9 +454,9 @@ class PdfButtonFieldHelper extends PdfFieldHelper {
           } else {
             mkDic = widget[PdfDictionaryProperties.mk] as PdfDictionary?;
           }
-          if (mkDic != null && mkDic.containsKey(PdfDictionaryProperties.r)) {
+          if (mkDic != null && mkDic.containsKey(PdfDictionaryProperties.red)) {
             final PdfNumber? angle =
-                mkDic[PdfDictionaryProperties.r] as PdfNumber?;
+                mkDic[PdfDictionaryProperties.red] as PdfNumber?;
             if (angle != null) {
               if (angle.value == 90) {
                 template = PdfTemplate(bounds.size.height, bounds.size.width);

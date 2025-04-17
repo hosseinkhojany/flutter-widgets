@@ -971,7 +971,7 @@ class _MonthViewRenderObject extends CustomCalendarRenderObject {
     final TextStyle? blackoutDatesStyle = calendarTheme.blackoutDatesTextStyle;
     final TextStyle disabledTextStyle = currentMonthTextStyle.copyWith(
         color: currentMonthTextStyle.color != null
-            ? currentMonthTextStyle.color!.withValues(alpha: 0.38)
+            ? currentMonthTextStyle.color!.withOpacity( 0.38)
             : themeData.brightness == Brightness.light
                 ? Colors.black26
                 : Colors.white38);
@@ -1167,7 +1167,7 @@ class _MonthViewRenderObject extends CustomCalendarRenderObject {
       _linePainter.style = PaintingStyle.stroke;
       _linePainter.strokeWidth = 2;
       _linePainter.color =
-          calendarTheme.selectionBorderColor!.withValues(alpha: 0.4);
+          calendarTheme.selectionBorderColor!.withOpacity( 0.4);
       canvas.drawRect(
           Rect.fromLTWH(
               xPosition == 0 ? xPosition + linePadding : xPosition,

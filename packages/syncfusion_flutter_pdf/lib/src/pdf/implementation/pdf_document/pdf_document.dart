@@ -1591,12 +1591,12 @@ class PdfDocumentHelper {
           '${'$root${PdfOperators.obj}${PdfOperators.newLine}${startDictionary}FDF$startDictionary${PdfDictionaryProperties.annots}'}['));
       for (int i = 0; i < annotID.length - 1; i++) {
         fdfBytes.addAll(utf8.encode(
-            '${annotID[i]}$genNumber${PdfDictionaryProperties.r}${PdfOperators.whiteSpace}'));
+            '${annotID[i]}$genNumber${PdfDictionaryProperties.red}${PdfOperators.whiteSpace}'));
       }
       fdfBytes.addAll(utf8.encode(
-          '${annotID[annotID.length - 1]}$genNumber${PdfDictionaryProperties.r}]${PdfOperators.slash}${PdfDictionaryProperties.f}($fileName)${PdfOperators.slash}${PdfDictionaryProperties.uf}($fileName)>>${PdfOperators.slash}${PdfDictionaryProperties.type}${PdfOperators.slash}${PdfDictionaryProperties.catalog}>>${PdfOperators.newLine}${PdfOperators.endobj}${PdfOperators.newLine}'));
+          '${annotID[annotID.length - 1]}$genNumber${PdfDictionaryProperties.red}]${PdfOperators.slash}${PdfDictionaryProperties.f}($fileName)${PdfOperators.slash}${PdfDictionaryProperties.uf}($fileName)>>${PdfOperators.slash}${PdfDictionaryProperties.type}${PdfOperators.slash}${PdfDictionaryProperties.catalog}>>${PdfOperators.newLine}${PdfOperators.endobj}${PdfOperators.newLine}'));
       fdfBytes.addAll(utf8.encode(
-          '${PdfOperators.trailer}${PdfOperators.newLine}$startDictionary${PdfDictionaryProperties.root}${PdfOperators.whiteSpace}$root${PdfDictionaryProperties.r}>>${PdfOperators.newLine}${PdfOperators.endOfFileMarker}${PdfOperators.newLine}'));
+          '${PdfOperators.trailer}${PdfOperators.newLine}$startDictionary${PdfDictionaryProperties.root}${PdfOperators.whiteSpace}$root${PdfDictionaryProperties.red}>>${PdfOperators.newLine}${PdfOperators.endOfFileMarker}${PdfOperators.newLine}'));
     }
     return fdfBytes;
   }

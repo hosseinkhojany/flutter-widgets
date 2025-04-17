@@ -812,10 +812,10 @@ class PdfFieldHelper {
     final PdfColor bc =
         WidgetAnnotationHelper.getHelper(widget!).widgetAppearance!.backColor;
     backBrush = PdfSolidBrush(bc);
-    final PdfColor color = PdfColor(bc.r, bc.g, bc.b);
-    color.r = (color.r - 64 >= 0 ? color.r - 64 : 0).toUnsigned(8);
-    color.g = (color.g - 64 >= 0 ? color.g - 64 : 0).toUnsigned(8);
-    color.b = (color.b - 64 >= 0 ? color.b - 64 : 0).toUnsigned(8);
+    final PdfColor color = PdfColor(bc.red, bc.green, bc.blue);
+    color.red = (color.red - 64 >= 0 ? color.red - 64 : 0).toUnsigned(8);
+    color.green = (color.green - 64 >= 0 ? color.green - 64 : 0).toUnsigned(8);
+    color.blue = (color.blue - 64 >= 0 ? color.blue - 64 : 0).toUnsigned(8);
     shadowBrush = PdfSolidBrush(color);
   }
 
@@ -1759,9 +1759,9 @@ class PdfFieldHelper {
       if (backBrush is PdfSolidBrush) {
         color = (backBrush! as PdfSolidBrush).color;
       }
-      color.r = (color.r - 64 >= 0 ? color.r - 64 : 0).toUnsigned(8);
-      color.g = (color.g - 64 >= 0 ? color.g - 64 : 0).toUnsigned(8);
-      color.b = (color.b - 64 >= 0 ? color.b - 64 : 0).toUnsigned(8);
+      color.red = (color.red - 64 >= 0 ? color.red - 64 : 0).toUnsigned(8);
+      color.green = (color.green - 64 >= 0 ? color.green - 64 : 0).toUnsigned(8);
+      color.blue = (color.blue - 64 >= 0 ? color.blue - 64 : 0).toUnsigned(8);
       brush = PdfSolidBrush(color);
     }
     return brush;

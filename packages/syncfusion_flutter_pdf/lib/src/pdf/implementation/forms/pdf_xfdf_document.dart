@@ -245,9 +245,9 @@ class XFdfDocument {
           element.attributes.add(XmlAttribute(XmlName('encoding'),
               _getValue(sound[PdfDictionaryProperties.e])));
         }
-        if (sound.containsKey(PdfDictionaryProperties.r)) {
+        if (sound.containsKey(PdfDictionaryProperties.red)) {
           element.attributes.add(XmlAttribute(
-              XmlName('rate'), _getValue(sound[PdfDictionaryProperties.r])));
+              XmlName('rate'), _getValue(sound[PdfDictionaryProperties.red])));
         }
         if (sound.dataStream != null && sound.dataStream!.isNotEmpty) {
           final String data = PdfString.bytesToHex(sound.dataStream!);
@@ -1117,13 +1117,13 @@ class XFdfDocument {
     final IPdfPrimitive? mdictionary =
         PdfCrossTable.dereference(dictionary[PdfDictionaryProperties.measure]);
     if (mdictionary != null && mdictionary is PdfDictionary) {
-      if (mdictionary.containsKey(PdfDictionaryProperties.r)) {
+      if (mdictionary.containsKey(PdfDictionaryProperties.red)) {
         measureXmlElement.attributes.add(XmlAttribute(XmlName('rateValue'),
-            _getValue(mdictionary[PdfDictionaryProperties.r])));
+            _getValue(mdictionary[PdfDictionaryProperties.red])));
       }
-      if (mdictionary.containsKey(PdfDictionaryProperties.a)) {
+      if (mdictionary.containsKey(PdfDictionaryProperties.alpha)) {
         IPdfPrimitive? aprimitive =
-            PdfCrossTable.dereference(mdictionary[PdfDictionaryProperties.a]);
+            PdfCrossTable.dereference(mdictionary[PdfDictionaryProperties.alpha]);
         if (aprimitive != null && aprimitive is PdfArray) {
           aprimitive = PdfCrossTable.dereference(aprimitive.elements[0]);
           if (aprimitive != null && aprimitive is PdfDictionary) {

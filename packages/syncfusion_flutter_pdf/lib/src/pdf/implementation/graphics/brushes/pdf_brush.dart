@@ -3011,7 +3011,7 @@ class PdfBrushes {
   static PdfBrush _getBrush(KnownColor kColor) {
     final ColorHelper color = ColorHelper(kColor);
     final PdfBrush brush =
-        PdfSolidBrush(PdfColor(color.r, color.g, color.b, color.a));
+        PdfSolidBrush(PdfColor(color.red, color.green, color.blue, color.alpha));
     _brushes[kColor] = brush;
     return brush;
   }

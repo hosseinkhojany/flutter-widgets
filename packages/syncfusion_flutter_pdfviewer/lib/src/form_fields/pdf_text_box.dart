@@ -199,17 +199,17 @@ class PdfTextFormFieldHelper extends PdfFormFieldHelper {
         fillColor: pdfTextField.backColor.isEmpty
             ? const Color.fromARGB(255, 221, 228, 255)
             : Color.fromRGBO(
-                pdfTextField.backColor.r,
-                pdfTextField.backColor.g,
-                pdfTextField.backColor.b,
+                pdfTextField.backColor.red,
+                pdfTextField.backColor.green,
+                pdfTextField.backColor.blue,
                 1,
               ),
         borderColor: pdfTextField.borderColor.isEmpty
             ? Colors.transparent
             : Color.fromRGBO(
-                pdfTextField.borderColor.r,
-                pdfTextField.borderColor.g,
-                pdfTextField.borderColor.b,
+                pdfTextField.borderColor.red,
+                pdfTextField.borderColor.green,
+                pdfTextField.borderColor.blue,
                 1,
               ),
         borderWidth: pdfTextField.borderWidth / heightPercentage,

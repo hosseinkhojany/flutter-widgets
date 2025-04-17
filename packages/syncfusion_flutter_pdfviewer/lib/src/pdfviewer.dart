@@ -2421,7 +2421,7 @@ class SfPdfViewerState extends State<SfPdfViewer> with WidgetsBindingObserver {
               ]
             : [
                 BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.3),
+                  color: Colors.black.withOpacity( 0.3),
                   blurRadius: 3,
                   offset: const Offset(0, 1),
                 ),
@@ -2511,7 +2511,7 @@ class SfPdfViewerState extends State<SfPdfViewer> with WidgetsBindingObserver {
                                 _effectiveThemeData
                                     ?.passwordDialogStyle?.closeIconColor ??
                                 _themeData?.colorScheme.onSurfaceVariant
-                                    .withValues(alpha: 0.6),
+                                    .withOpacity( 0.6),
                             size: 24,
                           ),
                         ),
@@ -2533,8 +2533,8 @@ class SfPdfViewerState extends State<SfPdfViewer> with WidgetsBindingObserver {
                           color: isMaterial3
                               ? _themeData!.colorScheme.onSurfaceVariant
                               : Theme.of(context).brightness == Brightness.light
-                                  ? Colors.black.withValues(alpha: 0.6)
-                                  : Colors.white.withValues(alpha: 0.6),
+                                  ? Colors.black.withOpacity( 0.6)
+                                  : Colors.white.withOpacity( 0.6),
                         )
                         .merge(
                           _pdfViewerThemeData!
@@ -2636,13 +2636,13 @@ class SfPdfViewerState extends State<SfPdfViewer> with WidgetsBindingObserver {
                                                 27,
                                                 31,
                                                 1,
-                                              ).withValues(alpha: 0.38)
+                                              ).withOpacity( 0.38)
                                             : const Color.fromRGBO(
                                                 230,
                                                 225,
                                                 229,
                                                 1,
-                                              ).withValues(alpha: 0.38))
+                                              ).withOpacity( 0.38))
                                     : Theme.of(context).colorScheme.primary,
                               )
                               .merge(
@@ -2675,8 +2675,8 @@ class SfPdfViewerState extends State<SfPdfViewer> with WidgetsBindingObserver {
             .copyWith(
               fontSize: 17,
               color: Theme.of(context).brightness == Brightness.light
-                  ? Colors.black.withValues(alpha: 0.87)
-                  : Colors.white.withValues(alpha: 0.87),
+                  ? Colors.black.withOpacity( 0.87)
+                  : Colors.white.withOpacity( 0.87),
             )
             .merge(
               _pdfViewerThemeData!.passwordDialogStyle?.inputFieldTextStyle,
@@ -2736,8 +2736,8 @@ class SfPdfViewerState extends State<SfPdfViewer> with WidgetsBindingObserver {
                 color: isMaterial3
                     ? _themeData!.colorScheme.onSurfaceVariant
                     : Theme.of(context).brightness == Brightness.light
-                        ? Colors.black.withValues(alpha: 0.6)
-                        : Colors.white.withValues(alpha: 0.6),
+                        ? Colors.black.withOpacity( 0.6)
+                        : Colors.white.withOpacity( 0.6),
               )
               .merge(
                 _pdfViewerThemeData!
@@ -2751,8 +2751,8 @@ class SfPdfViewerState extends State<SfPdfViewer> with WidgetsBindingObserver {
               .copyWith(
                 fontSize: 18,
                 color: Theme.of(context).brightness == Brightness.light
-                    ? Colors.black.withValues(alpha: 0.87)
-                    : Colors.white.withValues(alpha: 0.87),
+                    ? Colors.black.withOpacity( 0.87)
+                    : Colors.white.withOpacity( 0.87),
               )
               .merge(
                 _pdfViewerThemeData!
@@ -2784,7 +2784,7 @@ class SfPdfViewerState extends State<SfPdfViewer> with WidgetsBindingObserver {
                         .passwordDialogStyle?.visibleIconColor ??
                     Theme.of(
                       context,
-                    ).colorScheme.onSurface.withValues(alpha: 0.6),
+                    ).colorScheme.onSurface.withOpacity( 0.6),
               ),
               onPressed: () {
                 setState(() {
@@ -2895,8 +2895,8 @@ class SfPdfViewerState extends State<SfPdfViewer> with WidgetsBindingObserver {
                               color: isMaterial3
                                   ? Theme.of(context).brightness ==
                                           Brightness.light
-                                      ? Colors.black.withValues(alpha: 0.87)
-                                      : Colors.white.withValues(alpha: 0.87)
+                                      ? Colors.black.withOpacity( 0.87)
+                                      : Colors.white.withOpacity( 0.87)
                                   : _themeData!.colorScheme.onSurface,
                             )
                             .merge(
@@ -2962,8 +2962,8 @@ class SfPdfViewerState extends State<SfPdfViewer> with WidgetsBindingObserver {
                                       ? _themeData!.colorScheme.onSurfaceVariant
                                       : Theme.of(context).brightness ==
                                               Brightness.light
-                                          ? Colors.black.withValues(alpha: 0.6)
-                                          : Colors.white.withValues(alpha: 0.6),
+                                          ? Colors.black.withOpacity( 0.6)
+                                          : Colors.white.withOpacity( 0.6),
                                 )
                                 .merge(
                                   _pdfViewerThemeData!
@@ -2982,8 +2982,8 @@ class SfPdfViewerState extends State<SfPdfViewer> with WidgetsBindingObserver {
                                 fontSize: 17,
                                 color: Theme.of(context).brightness ==
                                         Brightness.light
-                                    ? Colors.black.withValues(alpha: 0.87)
-                                    : Colors.white.withValues(alpha: 0.87),
+                                    ? Colors.black.withOpacity( 0.87)
+                                    : Colors.white.withOpacity( 0.87),
                               )
                               .merge(
                                 _pdfViewerThemeData!
@@ -3040,8 +3040,8 @@ class SfPdfViewerState extends State<SfPdfViewer> with WidgetsBindingObserver {
                                       ? _themeData!.colorScheme.onSurfaceVariant
                                       : Theme.of(context).brightness ==
                                               Brightness.light
-                                          ? Colors.black.withValues(alpha: 0.6)
-                                          : Colors.white.withValues(alpha: 0.6),
+                                          ? Colors.black.withOpacity( 0.6)
+                                          : Colors.white.withOpacity( 0.6),
                                 )
                                 .merge(
                                   _pdfViewerThemeData!.passwordDialogStyle
@@ -3057,7 +3057,7 @@ class SfPdfViewerState extends State<SfPdfViewer> with WidgetsBindingObserver {
                                   fontSize: 18,
                                   color: Theme.of(context).brightness ==
                                           Brightness.light
-                                      ? Colors.black.withValues(alpha: 0.87)
+                                      ? Colors.black.withOpacity( 0.87)
                                       : Colors.white.withValues(
                                           alpha: 0.87,
                                         ),
@@ -3094,7 +3094,7 @@ class SfPdfViewerState extends State<SfPdfViewer> with WidgetsBindingObserver {
                                     Theme.of(context)
                                         .colorScheme
                                         .onSurface
-                                        .withValues(alpha: 0.6),
+                                        .withOpacity( 0.6),
                               ),
                               onPressed: () {
                                 setState(() {
@@ -3226,13 +3226,13 @@ class SfPdfViewerState extends State<SfPdfViewer> with WidgetsBindingObserver {
                                               27,
                                               31,
                                               1,
-                                            ).withValues(alpha: 0.38)
+                                            ).withOpacity( 0.38)
                                           : const Color.fromRGBO(
                                               230,
                                               225,
                                               229,
                                               1,
-                                            ).withValues(alpha: 0.38))
+                                            ).withOpacity( 0.38))
                                   : Theme.of(context).colorScheme.primary,
                             )
                             .merge(
@@ -3457,7 +3457,7 @@ class SfPdfViewerState extends State<SfPdfViewer> with WidgetsBindingObserver {
                   ? _effectiveThemeData!.progressBarColor!.withValues(
                       alpha: 0.2,
                     )
-                  : _themeData!.colorScheme.primary.withValues(alpha: 0.2),
+                  : _themeData!.colorScheme.primary.withOpacity( 0.2),
         ),
       ],
     );

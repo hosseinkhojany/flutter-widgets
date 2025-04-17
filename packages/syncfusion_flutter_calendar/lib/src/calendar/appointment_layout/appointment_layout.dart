@@ -2178,7 +2178,7 @@ class _AppointmentRenderObject extends CustomCalendarRenderObject {
         rect.top < hoverPosition.dy &&
         rect.bottom > hoverPosition.dy) {
       _appointmentPainter.color =
-          calendarTheme.selectionBorderColor!.withValues(alpha: 0.4);
+          calendarTheme.selectionBorderColor!.withOpacity( 0.4);
       _appointmentPainter.strokeWidth = 2;
       _appointmentPainter.style = PaintingStyle.stroke;
       canvas.drawRRect(rect, _appointmentPainter);

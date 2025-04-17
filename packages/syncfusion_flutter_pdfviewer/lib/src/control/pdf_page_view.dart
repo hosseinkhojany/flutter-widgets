@@ -848,7 +848,7 @@ class PdfPageViewState extends State<PdfPageView> {
                       )
                     : (Theme.of(
                         context,
-                      ).colorScheme.primary.withValues(alpha: 0.2)),
+                      ).colorScheme.primary.withOpacity( 0.2)),
           ),
         ),
       ),

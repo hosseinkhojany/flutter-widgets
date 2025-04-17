@@ -269,8 +269,8 @@ class RenderMapBubble extends ShapeLayerChildRenderBoxBase {
   }
 
   void _updateHoverItemTween() {
-    final double opacity = _bubbleAnimation.value * _bubbleSettings.color!.a;
-    final Color defaultColor = bubbleSettings.color!.withValues(alpha: opacity);
+    final double opacity = _bubbleAnimation.value * _bubbleSettings.color!.alpha;
+    final Color defaultColor = bubbleSettings.color!.withOpacity( opacity);
     if (_currentHoverItem != null) {
       _forwardBubbleHoverColorTween.begin =
           _currentHoverItem!.bubbleColor ?? defaultColor;
@@ -356,7 +356,7 @@ class RenderMapBubble extends ShapeLayerChildRenderBoxBase {
     final Color? toggledBubbleColor =
         _themeData.toggledItemColor != Colors.transparent
             ? _themeData.toggledItemColor!
-                .withValues(alpha: _legend!.toggledItemOpacity)
+                .withOpacity( _legend!.toggledItemOpacity)
             : null;
 
     _forwardToggledBubbleColorTween.end = toggledBubbleColor;
@@ -415,8 +415,8 @@ class RenderMapBubble extends ShapeLayerChildRenderBoxBase {
       ..clipRect(bounds);
     controller!.applyTransform(context, offset);
 
-    final double opacity = _bubbleAnimation.value * _bubbleSettings.color!.a;
-    final Color defaultColor = bubbleSettings.color!.withValues(alpha: opacity);
+    final double opacity = _bubbleAnimation.value * _bubbleSettings.color!.alpha;
+    final Color defaultColor = bubbleSettings.color!.withOpacity( opacity);
     final bool hasToggledIndices = controller!.toggledIndices.isNotEmpty;
     final Paint fillPaint = Paint()..isAntiAlias = true;
     final Paint strokePaint = Paint()

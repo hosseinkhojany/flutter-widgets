@@ -576,10 +576,10 @@ class PdfPageCollection {
               final PdfBookmarkBase current = bookmarks[i] as PdfBookmarkBase;
               if (PdfBookmarkBaseHelper.getHelper(current)
                   .dictionary!
-                  .containsKey(PdfDictionaryProperties.a)) {
+                  .containsKey(PdfDictionaryProperties.alpha)) {
                 PdfBookmarkBaseHelper.getHelper(current)
                     .dictionary!
-                    .remove(PdfDictionaryProperties.a);
+                    .remove(PdfDictionaryProperties.alpha);
               }
               if (PdfBookmarkBaseHelper.getHelper(current)
                   .dictionary!

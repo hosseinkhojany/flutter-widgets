@@ -593,7 +593,7 @@ class TooltipRenderBox extends RenderShiftedBox {
           _tooltip.borderWidth == 0 ? Colors.transparent : _tooltip.borderColor
       ..strokeWidth = _tooltip.borderWidth;
     final Paint fillPaint = Paint()
-      ..color = (_tooltip.color).withValues(alpha: _tooltip.opacity)
+      ..color = (_tooltip.color).withOpacity( _tooltip.opacity)
       ..style = PaintingStyle.fill;
     const double currentHeight = 5.0;
     const double arrowWidth = 8;
@@ -860,7 +860,7 @@ class TooltipRenderBox extends RenderShiftedBox {
         isRight, startX, endX, animationFactor, xPosition, yPosition);
 
     final TextStyle textStyle = _tooltip.textStyle.copyWith(
-      color: _tooltip.textStyle.color?.withValues(alpha: _tooltip.opacity) ??
+      color: _tooltip.textStyle.color?.withOpacity( _tooltip.opacity) ??
           _tooltip.labelColor,
       fontSize: (_tooltip.textStyle.fontSize ?? 12.0) * animationFactor,
     );
@@ -938,7 +938,7 @@ class TooltipRenderBox extends RenderShiftedBox {
       // ignore: omit_local_variable_types
       final Paint markerBorderPaint = Paint();
       markerBorderPaint.color =
-          Colors.white.withValues(alpha: _tooltip.opacity);
+          Colors.white.withOpacity( _tooltip.opacity);
       markerBorderPaint.strokeWidth = 1;
       markerBorderPaint.style = PaintingStyle.stroke;
       canvas.drawPath(markerPath, markerBorderPaint);
@@ -998,14 +998,14 @@ class TooltipRenderBox extends RenderShiftedBox {
       backgroundPath.lineTo(startX + ((endX - startX) / 4), factor);
     }
     final Paint fillPaint = Paint()
-      ..color = (_tooltip.color).withValues(alpha: _tooltip.opacity)
+      ..color = (_tooltip.color).withOpacity( _tooltip.opacity)
       ..strokeCap = StrokeCap.round
       ..style = PaintingStyle.fill;
 
     final Paint strokePaint = Paint()
       ..color = _tooltip.borderColor == Colors.transparent
           ? Colors.transparent
-          : _tooltip.borderColor.withValues(alpha: _tooltip.opacity)
+          : _tooltip.borderColor.withOpacity( _tooltip.opacity)
       ..strokeCap = StrokeCap.butt
       ..style = PaintingStyle.stroke
       ..strokeWidth = _tooltip.borderWidth;
@@ -1040,7 +1040,7 @@ class TooltipRenderBox extends RenderShiftedBox {
     final int maxLinesOfTooltipContent = getMaxLinesContent(_stringValue);
     if (_header!.isNotEmpty) {
       final TextStyle headerTextStyle = _tooltip.textStyle.copyWith(
-        color: textStyle.color?.withValues(alpha: _tooltip.opacity) ??
+        color: textStyle.color?.withOpacity( _tooltip.opacity) ??
             _tooltip.labelColor,
         fontSize: (textStyle.fontSize ?? 12) * animationFactor,
         fontWeight: FontWeight.bold,
@@ -1064,7 +1064,7 @@ class TooltipRenderBox extends RenderShiftedBox {
 
       final Paint dividerPaint = Paint();
       dividerPaint.color =
-          _tooltip.labelColor.withValues(alpha: _tooltip.opacity);
+          _tooltip.labelColor.withOpacity( _tooltip.opacity);
       dividerPaint.strokeWidth = 0.5 * animationFactor;
       dividerPaint.style = PaintingStyle.stroke;
       num lineOffset = 0;
@@ -1182,10 +1182,10 @@ class TooltipRenderBox extends RenderShiftedBox {
     if (kIsWeb) {
       if (_animationFactor < 0.5) {
         style = style.copyWith(
-            color: style.color!.withValues(alpha: _animationFactor));
+            color: style.color!.withOpacity( _animationFactor));
       } else if (_animationFactor <= 1) {
         style = style.copyWith(
-            color: style.color!.withValues(alpha: tooltip.opacity));
+            color: style.color!.withOpacity( tooltip.opacity));
       }
     }
     final TextSpan span = TextSpan(text: text, style: style);

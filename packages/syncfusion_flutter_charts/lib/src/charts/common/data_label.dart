@@ -751,13 +751,13 @@ class _CartesianDataLabelContainerState<T, D>
   Color _dataPointColor(int dataPointIndex) {
     final DataLabelSettings settings = widget.settings;
     if (settings.color != null) {
-      return settings.color!.withValues(alpha: settings.opacity);
+      return settings.color!.withOpacity(settings.opacity);
     } else if (settings.useSeriesColor) {
       final Color? pointColor = renderer!.pointColors.isNotEmpty
           ? renderer!.pointColors[dataPointIndex]
           : null;
       return (pointColor ?? renderer!.color ?? renderer!.paletteColor)
-          .withValues(alpha: settings.opacity);
+          .withOpacity(settings.opacity);
     } else {
       return Colors.transparent;
     }

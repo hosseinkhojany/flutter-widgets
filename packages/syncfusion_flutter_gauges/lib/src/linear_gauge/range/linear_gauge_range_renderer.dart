@@ -436,7 +436,7 @@ class RenderLinearRange extends RenderOpacity {
       animationValue = _rangeAnimation!.value;
     }
 
-    _rangePaint.color = color.withValues(alpha: animationValue * color.a);
+    _rangePaint.color = color.withOpacity( animationValue * color.alpha);
     _path.reset();
     _getRangePath();
     canvas.drawPath(_path, _rangePaint);

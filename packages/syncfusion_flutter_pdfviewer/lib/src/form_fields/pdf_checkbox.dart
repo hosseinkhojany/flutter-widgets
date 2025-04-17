@@ -158,17 +158,17 @@ class PdfCheckboxFormFieldHelper extends PdfFormFieldHelper {
         fillColor: pdfCheckboxField.backColor.isEmpty
             ? const Color.fromARGB(255, 221, 228, 255)
             : Color.fromRGBO(
-                pdfCheckboxField.backColor.r,
-                pdfCheckboxField.backColor.g,
-                pdfCheckboxField.backColor.b,
+                pdfCheckboxField.backColor.red,
+                pdfCheckboxField.backColor.green,
+                pdfCheckboxField.backColor.blue,
                 1,
               ),
         borderColor: pdfCheckboxField.borderColor.isEmpty
             ? Colors.transparent
             : Color.fromRGBO(
-                pdfCheckboxField.borderColor.r,
-                pdfCheckboxField.borderColor.g,
-                pdfCheckboxField.borderColor.b,
+                pdfCheckboxField.borderColor.red,
+                pdfCheckboxField.borderColor.green,
+                pdfCheckboxField.borderColor.blue,
                 1,
               ),
         borderWidth: (pdfCheckboxField.borderWidth == 0

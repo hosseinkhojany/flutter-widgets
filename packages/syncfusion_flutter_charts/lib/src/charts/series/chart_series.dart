@@ -1878,10 +1878,10 @@ abstract class ChartSeriesRenderer<T, D> extends RenderBox
 
     if (opacity != 1.0) {
       if (color != Colors.transparent) {
-        color = color.withValues(alpha: opacity);
+        color = color.withOpacity(opacity);
       }
       if (strokeColor != Colors.transparent) {
-        strokeColor = strokeColor.withValues(alpha: opacity);
+        strokeColor = strokeColor.withOpacity(opacity);
       }
     }
 
@@ -1893,12 +1893,12 @@ abstract class ChartSeriesRenderer<T, D> extends RenderBox
         final double opacity = effectiveSelectionBehavior!.selectedOpacity;
         color = effectiveSelectionBehavior!.selectedColor ?? color;
         if (color != Colors.transparent) {
-          color = color.withValues(alpha: opacity);
+          color = color.withOpacity(opacity);
         }
         strokeColor =
             effectiveSelectionBehavior!.selectedBorderColor ?? strokeColor;
         if (strokeColor != Colors.transparent) {
-          strokeColor = strokeColor.withValues(alpha: opacity);
+          strokeColor = strokeColor.withOpacity(opacity);
         }
         strokeWidth =
             effectiveSelectionBehavior!.selectedBorderWidth ?? strokeWidth;
@@ -1906,12 +1906,12 @@ abstract class ChartSeriesRenderer<T, D> extends RenderBox
         final double opacity = effectiveSelectionBehavior!.unselectedOpacity;
         color = effectiveSelectionBehavior!.unselectedColor ?? color;
         if (color != Colors.transparent) {
-          color = color.withValues(alpha: opacity);
+          color = color.withOpacity(opacity);
         }
         strokeColor =
             effectiveSelectionBehavior!.unselectedBorderColor ?? strokeColor;
         if (strokeColor != Colors.transparent) {
-          strokeColor = strokeColor.withValues(alpha: opacity);
+          strokeColor = strokeColor.withOpacity(opacity);
         }
         strokeWidth =
             effectiveSelectionBehavior!.unselectedBorderWidth ?? strokeWidth;

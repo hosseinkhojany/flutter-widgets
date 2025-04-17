@@ -343,9 +343,9 @@ class PdfTextMarkupAnnotationHelper extends PdfAnnotationHelper {
     if (!helper.isLoadedAnnotation) {
       final PdfArray textMarkupColor = PdfArray();
       if (!color.isEmpty) {
-        final double red = color.r / 255;
-        final double green = color.g / 255;
-        final double blue = color.b / 255;
+        final double red = color.red / 255;
+        final double green = color.green / 255;
+        final double blue = color.blue / 255;
         if (textMarkupColor.elements.isEmpty) {
           textMarkupColor.add(PdfNumber(red));
           textMarkupColor.add(PdfNumber(green));

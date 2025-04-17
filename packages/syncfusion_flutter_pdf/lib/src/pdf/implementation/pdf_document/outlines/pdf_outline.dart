@@ -435,7 +435,7 @@ class PdfBookmark extends PdfBookmarkBase {
       dictionary.setProperty(
           PdfDictionaryProperties.s, PdfName(PdfDictionaryProperties.goTo));
       dictionary.setProperty(
-          PdfDictionaryProperties.a, PdfReferenceHolder(dictionary));
+          PdfDictionaryProperties.alpha, PdfReferenceHolder(dictionary));
     }
   }
 
@@ -565,7 +565,7 @@ class PdfBookmark extends PdfBookmarkBase {
   set action(PdfAction? value) {
     if (value != null && _action != value) {
       _action = value;
-      _helper.dictionary!.setProperty(PdfDictionaryProperties.a,
+      _helper.dictionary!.setProperty(PdfDictionaryProperties.alpha,
           PdfReferenceHolder(PdfActionHelper.getHelper(_action!).dictionary));
     }
   }
@@ -764,9 +764,9 @@ class PdfBookmark extends PdfBookmarkBase {
 
   void _assignColor(PdfColor color) {
     final List<double> rgb = <double>[
-      color.r.toDouble(),
-      color.g.toDouble(),
-      color.b.toDouble()
+      color.red.toDouble(),
+      color.green.toDouble(),
+      color.blue.toDouble()
     ];
     final PdfArray colors = PdfArray(rgb);
     _helper.dictionary!.setProperty(PdfDictionaryProperties.c, colors);
@@ -789,9 +789,9 @@ class PdfBookmark extends PdfBookmarkBase {
     PdfNamedDestination? namedDestination;
     IPdfPrimitive? destination;
     if (namedCollection != null) {
-      if (_helper.dictionary!.containsKey(PdfDictionaryProperties.a)) {
+      if (_helper.dictionary!.containsKey(PdfDictionaryProperties.alpha)) {
         final PdfDictionary? action = PdfCrossTable.dereference(
-            _helper.dictionary![PdfDictionaryProperties.a]) as PdfDictionary?;
+            _helper.dictionary![PdfDictionaryProperties.alpha]) as PdfDictionary?;
         if (action != null && action.containsKey(PdfDictionaryProperties.d)) {
           destination =
               PdfCrossTable.dereference(action[PdfDictionaryProperties.d]);
@@ -943,10 +943,10 @@ class PdfBookmark extends PdfBookmarkBase {
           }
         }
       }
-    } else if (_helper.dictionary!.containsKey(PdfDictionaryProperties.a) &&
+    } else if (_helper.dictionary!.containsKey(PdfDictionaryProperties.alpha) &&
         (_destination == null)) {
       IPdfPrimitive? obj = _helper._crossTable
-          .getObject(_helper.dictionary![PdfDictionaryProperties.a]);
+          .getObject(_helper.dictionary![PdfDictionaryProperties.alpha]);
       PdfDictionary? destDic;
       if (obj is PdfDictionary) {
         destDic = obj;

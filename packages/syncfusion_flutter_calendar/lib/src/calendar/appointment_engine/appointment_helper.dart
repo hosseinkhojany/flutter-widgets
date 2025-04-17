@@ -898,7 +898,7 @@ class AppointmentHelper {
       if (appTimeZoneId == 'Dateline Standard Time') {
         convertedDate = date.toUtc().subtract(const Duration(hours: 12));
         //// Above mentioned converted date hold the date value which is equal to original date, but the time zone value changed.
-        //// E.g., Nov 3- 9.00 AM IST equal to Nov 2- 10.30 PM EST
+        //// E.green., Nov 3- 9.00 AM IST equal to Nov 2- 10.30 PM EST
         //// So convert the Appointment time zone date to current time zone date.
         convertedDate = DateTime(
             date.year - (convertedDate.year - date.year),

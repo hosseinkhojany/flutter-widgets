@@ -272,7 +272,7 @@ class PdfPage implements IPdfWrapper {
     if (_formFieldsTabOrder != PdfFormFieldsTabOrder.none) {
       String tabs = ' ';
       if (_formFieldsTabOrder == PdfFormFieldsTabOrder.row) {
-        tabs = PdfDictionaryProperties.r;
+        tabs = PdfDictionaryProperties.red;
       }
       if (_formFieldsTabOrder == PdfFormFieldsTabOrder.column) {
         tabs = PdfDictionaryProperties.c;

@@ -924,7 +924,7 @@ class _SfLegendState extends State<SfLegend> {
       _textStyle = themeData.textTheme.bodySmall!
           .copyWith(
               color:
-                  themeData.textTheme.bodySmall!.color!.withValues(alpha: 0.87))
+                  themeData.textTheme.bodySmall!.color!.withOpacity( 0.87))
           .merge(widget.textStyle);
     }
     if (!widget.isComplex) {

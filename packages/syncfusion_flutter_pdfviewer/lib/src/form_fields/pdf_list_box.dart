@@ -132,17 +132,17 @@ class PdfListBoxFormFieldHelper extends PdfFormFieldHelper {
         fillColor: pdfListBoxField.backColor.isEmpty
             ? const Color.fromARGB(255, 221, 228, 255)
             : Color.fromRGBO(
-                pdfListBoxField.backColor.r,
-                pdfListBoxField.backColor.g,
-                pdfListBoxField.backColor.b,
+                pdfListBoxField.backColor.red,
+                pdfListBoxField.backColor.green,
+                pdfListBoxField.backColor.blue,
                 1,
               ),
         borderColor: pdfListBoxField.borderColor.isEmpty
             ? Colors.transparent
             : Color.fromRGBO(
-                pdfListBoxField.borderColor.r,
-                pdfListBoxField.borderColor.g,
-                pdfListBoxField.borderColor.b,
+                pdfListBoxField.borderColor.red,
+                pdfListBoxField.borderColor.green,
+                pdfListBoxField.borderColor.blue,
                 1,
               ),
         borderWidth: pdfListBoxField.borderWidth / heightPercentage,

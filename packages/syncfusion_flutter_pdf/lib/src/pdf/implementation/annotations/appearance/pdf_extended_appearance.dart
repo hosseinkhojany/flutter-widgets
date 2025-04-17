@@ -32,7 +32,7 @@ class PdfExtendedAppearance implements IPdfWrapper {
     if (_mouseHover == null) {
       _mouseHover = PdfAppearanceState();
       _dictionary!.setProperty(
-          PdfDictionaryProperties.r, PdfReferenceHolder(_mouseHover));
+          PdfDictionaryProperties.red, PdfReferenceHolder(_mouseHover));
     }
     return _mouseHover!;
   }

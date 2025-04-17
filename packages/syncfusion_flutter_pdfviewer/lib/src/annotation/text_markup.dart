@@ -235,7 +235,7 @@ class RenderTextMarkupAnnotationView extends RenderInteractiveGraphicsView {
   @override
   void paint(PaintingContext context, Offset offset) {
     final Canvas canvas = context.canvas;
-    final Paint paint = Paint()..color = color.withValues(alpha: opacity);
+    final Paint paint = Paint()..color = color.withOpacity( opacity);
 
     if (_textMarkupType == TextMarkupType.highlight) {
       _drawHighlight(canvas, paint, offset);
@@ -259,7 +259,7 @@ class RenderTextMarkupAnnotationView extends RenderInteractiveGraphicsView {
   }
 
   void _drawHighlight(Canvas canvas, Paint paint, Offset offset) {
-    paint.color = color.withValues(alpha: opacity * 0.3);
+    paint.color = color.withOpacity( opacity * 0.3);
     paint.style = PaintingStyle.fill;
     final HighlightAnnotation highlightAnnotation =
         annotation as HighlightAnnotation;

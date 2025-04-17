@@ -694,7 +694,7 @@ class XfdfParser {
                             PdfDictionaryProperties.type, 'Sound');
                         _addNumber(soundStream, element, 'bits', 'B');
                         _addNumber(soundStream, element, 'rate',
-                            PdfDictionaryProperties.r);
+                            PdfDictionaryProperties.red);
                         _addNumber(soundStream, element, 'channels',
                             PdfDictionaryProperties.c);
                         String? attribute = element.getAttribute('encoding');
@@ -896,7 +896,7 @@ class XfdfParser {
     final PdfDictionary dDict = PdfDictionary();
     final PdfDictionary aDict = PdfDictionary();
     final PdfDictionary xDict = PdfDictionary();
-    measureDictionary.items![PdfName(PdfDictionaryProperties.a)] = aArray;
+    measureDictionary.items![PdfName(PdfDictionaryProperties.alpha)] = aArray;
     measureDictionary.items![PdfName(PdfDictionaryProperties.d)] = dArray;
     measureDictionary.items![PdfName(PdfDictionaryProperties.x)] = xArray;
     if (measurement != null) {
@@ -905,7 +905,7 @@ class XfdfParser {
       if (measurement.attributes.isNotEmpty) {
         final String? attribute = measurement.getAttribute('rateValue');
         if (!isNullOrEmpty(attribute)) {
-          measureDictionary.setString(PdfDictionaryProperties.r, attribute);
+          measureDictionary.setString(PdfDictionaryProperties.red, attribute);
         }
       }
       for (final XmlNode childNode in measurement.children) {

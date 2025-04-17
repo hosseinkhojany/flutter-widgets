@@ -507,8 +507,8 @@ class CanvasRenderBox extends RenderBox {
                             fontSize: 24,
                             color:
                                 Theme.of(context).brightness == Brightness.light
-                                    ? Colors.black.withValues(alpha: 0.87)
-                                    : Colors.white.withValues(alpha: 0.87),
+                                    ? Colors.black.withOpacity( 0.87)
+                                    : Colors.white.withOpacity( 0.87),
                           )
                           .merge(
                             _pdfViewerThemeData!
@@ -521,8 +521,8 @@ class CanvasRenderBox extends RenderBox {
                             fontSize: 20,
                             color:
                                 Theme.of(context).brightness == Brightness.light
-                                    ? Colors.black.withValues(alpha: 0.87)
-                                    : Colors.white.withValues(alpha: 0.87),
+                                    ? Colors.black.withOpacity( 0.87)
+                                    : Colors.white.withOpacity( 0.87),
                           )
                           .merge(
                             _pdfViewerThemeData!
@@ -584,8 +584,8 @@ class CanvasRenderBox extends RenderBox {
                                 fontSize: 14,
                                 color: Theme.of(context).brightness ==
                                         Brightness.light
-                                    ? Colors.black.withValues(alpha: 0.87)
-                                    : Colors.white.withValues(alpha: 0.87),
+                                    ? Colors.black.withOpacity( 0.87)
+                                    : Colors.white.withOpacity( 0.87),
                               )
                               .merge(
                                 _pdfViewerThemeData!
@@ -612,8 +612,8 @@ class CanvasRenderBox extends RenderBox {
                                 fontSize: 14,
                                 color: Theme.of(context).brightness ==
                                         Brightness.light
-                                    ? Colors.black.withValues(alpha: 0.87)
-                                    : Colors.white.withValues(alpha: 0.87),
+                                    ? Colors.black.withOpacity( 0.87)
+                                    : Colors.white.withOpacity( 0.87),
                               )
                               .merge(
                                 _pdfViewerThemeData!
@@ -651,8 +651,8 @@ class CanvasRenderBox extends RenderBox {
                         fontSize: 14,
                         fontWeight: isMaterial3 ? FontWeight.w500 : null,
                         color: Theme.of(context).brightness == Brightness.light
-                            ? Colors.black.withValues(alpha: 0.6)
-                            : Colors.white.withValues(alpha: 0.6),
+                            ? Colors.black.withOpacity( 0.6)
+                            : Colors.white.withOpacity( 0.6),
                       )
                       .merge(
                         _pdfViewerThemeData!
@@ -740,8 +740,8 @@ class CanvasRenderBox extends RenderBox {
                         color: isMaterial3
                             ? Theme.of(context).colorScheme.onSurface
                             : Theme.of(context).brightness == Brightness.light
-                                ? Colors.black.withValues(alpha: 0.87)
-                                : Colors.white.withValues(alpha: 0.87),
+                                ? Colors.black.withOpacity( 0.87)
+                                : Colors.white.withOpacity( 0.87),
                       )
                       .merge(
                         _pdfViewerThemeData!
@@ -798,8 +798,8 @@ class CanvasRenderBox extends RenderBox {
                                 fontSize: 14,
                                 color: Theme.of(context).brightness ==
                                         Brightness.light
-                                    ? Colors.black.withValues(alpha: 0.87)
-                                    : Colors.white.withValues(alpha: 0.87),
+                                    ? Colors.black.withOpacity( 0.87)
+                                    : Colors.white.withOpacity( 0.87),
                               )
                               .merge(
                                 _pdfViewerThemeData!
@@ -824,8 +824,8 @@ class CanvasRenderBox extends RenderBox {
                                 fontSize: 14,
                                 color: Theme.of(context).brightness ==
                                         Brightness.light
-                                    ? Colors.black.withValues(alpha: 0.87)
-                                    : Colors.white.withValues(alpha: 0.87),
+                                    ? Colors.black.withOpacity( 0.87)
+                                    : Colors.white.withOpacity( 0.87),
                               )
                               .merge(
                                 _pdfViewerThemeData!
@@ -862,8 +862,8 @@ class CanvasRenderBox extends RenderBox {
                         fontSize: 14,
                         fontWeight: isMaterial3 ? FontWeight.w500 : null,
                         color: Theme.of(context).brightness == Brightness.light
-                            ? Colors.black.withValues(alpha: 0.6)
-                            : Colors.white.withValues(alpha: 0.6),
+                            ? Colors.black.withOpacity( 0.6)
+                            : Colors.white.withOpacity( 0.6),
                       )
                       .merge(
                         _pdfViewerThemeData!
@@ -2557,7 +2557,7 @@ class CanvasRenderBox extends RenderBox {
       case TargetPlatform.iOS:
       case TargetPlatform.macOS:
         _selectionColor ??= selectionTheme.selectionColor ??
-            cupertinoTheme.primaryColor.withValues(alpha: 0.40);
+            cupertinoTheme.primaryColor.withOpacity( 0.40);
         _selectionHandleColor ??=
             selectionTheme.selectionHandleColor ?? cupertinoTheme.primaryColor;
         break;
@@ -2566,7 +2566,7 @@ class CanvasRenderBox extends RenderBox {
       case TargetPlatform.linux:
       case TargetPlatform.windows:
         _selectionColor ??= selectionTheme.selectionColor ??
-            theme.colorScheme.primary.withValues(alpha: 0.40);
+            theme.colorScheme.primary.withOpacity( 0.40);
         _selectionHandleColor ??=
             selectionTheme.selectionHandleColor ?? theme.colorScheme.primary;
         break;

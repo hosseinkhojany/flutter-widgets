@@ -379,9 +379,9 @@ class PdfAnnotationCollectionHelper extends PdfObjectCollectionHelper {
             annot = _createDocumentLinkAnnotation(dictionary, crossTable!);
             break;
           case PdfAnnotationTypes.linkAnnotation:
-            if (dictionary.containsKey(PdfDictionaryProperties.a)) {
+            if (dictionary.containsKey(PdfDictionaryProperties.alpha)) {
               final PdfDictionary? remoteLinkDic = PdfCrossTable.dereference(
-                  dictionary[PdfDictionaryProperties.a]) as PdfDictionary?;
+                  dictionary[PdfDictionaryProperties.alpha]) as PdfDictionary?;
               if (remoteLinkDic != null &&
                   remoteLinkDic.containsKey(PdfDictionaryProperties.s)) {
                 PdfName? gotor;
@@ -442,9 +442,9 @@ class PdfAnnotationCollectionHelper extends PdfObjectCollectionHelper {
     switch (str.toLowerCase()) {
       case 'link':
         PdfDictionary? linkDic;
-        if (dictionary.containsKey(PdfDictionaryProperties.a)) {
+        if (dictionary.containsKey(PdfDictionaryProperties.alpha)) {
           linkDic =
-              PdfCrossTable.dereference(dictionary[PdfDictionaryProperties.a])
+              PdfCrossTable.dereference(dictionary[PdfDictionaryProperties.alpha])
                   as PdfDictionary?;
         }
         if (linkDic != null && linkDic.containsKey(PdfDictionaryProperties.s)) {

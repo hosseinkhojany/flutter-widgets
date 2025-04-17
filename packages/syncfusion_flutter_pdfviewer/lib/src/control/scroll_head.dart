@@ -195,8 +195,8 @@ class _ScrollHeadState extends State<ScrollHead> {
                       .copyWith(
                         fontSize: _isMaterial3 ? 14 : 12,
                         color: Theme.of(context).brightness == Brightness.light
-                            ? Colors.black.withValues(alpha: 0.87)
-                            : Colors.white.withValues(alpha: 0.87),
+                            ? Colors.black.withOpacity( 0.87)
+                            : Colors.white.withOpacity( 0.87),
                       )
                       .merge(
                         _pdfViewerThemeData!

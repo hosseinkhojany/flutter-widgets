@@ -601,7 +601,7 @@ class JsonParser {
     final PdfDictionary xDict = PdfDictionary();
     final PdfDictionary tDict = PdfDictionary();
     final PdfDictionary vDict = PdfDictionary();
-    measureDictionary.items![PdfName(PdfDictionaryProperties.a)] = aArray;
+    measureDictionary.items![PdfName(PdfDictionaryProperties.alpha)] = aArray;
     measureDictionary.items![PdfName(PdfDictionaryProperties.d)] = dArray;
     measureDictionary.items![PdfName(PdfDictionaryProperties.x)] = xArray;
     measureDictionary.items![PdfName(PdfDictionaryProperties.t)] = tArray;
@@ -614,7 +614,7 @@ class JsonParser {
       if (value is String) {
         switch (key.toLowerCase()) {
           case 'ratevalue':
-            measureDictionary.setString(PdfDictionaryProperties.r, value);
+            measureDictionary.setString(PdfDictionaryProperties.red, value);
             break;
           case 'subtype':
             measureDictionary.setString(PdfDictionaryProperties.subtype, value);
@@ -1025,7 +1025,7 @@ class JsonParser {
           style = PdfDictionaryProperties.s;
           break;
         case 'bevelled':
-          style = PdfDictionaryProperties.b;
+          style = PdfDictionaryProperties.blue;
           break;
         case 'inset':
           style = PdfDictionaryProperties.i;
@@ -1141,12 +1141,12 @@ class JsonParser {
               switch (key) {
                 case 'bits':
                   if (!isNullOrEmpty(value)) {
-                    addNumber(soundStream, PdfDictionaryProperties.b, value);
+                    addNumber(soundStream, PdfDictionaryProperties.blue, value);
                   }
                   break;
                 case 'rate':
                   if (!isNullOrEmpty(value)) {
-                    addNumber(soundStream, PdfDictionaryProperties.r, value);
+                    addNumber(soundStream, PdfDictionaryProperties.red, value);
                   }
                   break;
                 case 'channels':

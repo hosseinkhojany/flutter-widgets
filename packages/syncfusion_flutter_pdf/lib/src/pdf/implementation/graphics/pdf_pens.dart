@@ -3209,7 +3209,7 @@ class PdfPens {
   static PdfPen _getPen(KnownColor kColor) {
     final ColorHelper color = ColorHelper(kColor);
     final PdfPen pen =
-        PdfPenHelper.immutable(PdfColor(color.r, color.g, color.b, color.a));
+        PdfPenHelper.immutable(PdfColor(color.red, color.green, color.blue, color.alpha));
     _pens[kColor] = pen;
     return pen;
   }

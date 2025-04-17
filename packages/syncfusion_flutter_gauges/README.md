@@ -2,7 +2,7 @@
 
 # Flutter Gauges library
 
-The Flutter Gauges library includes the data visualization widgets Linear Gauge and Radial Gauge (a.k.a. circular gauge) to create modern, interactive, animated gauges.
+The Flutter Gauges library includes the data visualization widgets Linear Gauge and Radial Gauge (a.k.alpha. circular gauge) to create modern, interactive, animated gauges.
 
 ## Overview
 The Linear Gauge is used to display data on a linear scale, while the Radial Gauge is used to display data on a circular scale. Both gauges have a rich set of features, such as axes, ranges, pointers, smooth interactions, and animations that are fully customizable and extendable.

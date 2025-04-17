@@ -246,7 +246,7 @@ class BookmarkViewControllerState extends State<BookmarkView> {
             visible: _isTablet,
             child: GestureDetector(
               onTap: _handleClose,
-              child: Container(color: Colors.black.withValues(alpha: 0.3)),
+              child: Container(color: Colors.black.withOpacity( 0.3)),
             ),
           ),
           Align(
@@ -486,7 +486,7 @@ class BookmarkTreeState extends State<BookmarkTree> {
       Icons.expand_more,
       color: _pdfViewerThemeData!.bookmarkViewStyle?.navigationIconColor ??
           _effectiveThemeData!.bookmarkViewStyle?.navigationIconColor ??
-          Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.54),
+          Theme.of(context).colorScheme.onSurface.withOpacity( 0.54),
       size: 18,
     );
     return ListView.builder(
@@ -508,8 +508,8 @@ class BookmarkTreeState extends State<BookmarkTree> {
             hoverColor: Theme.of(context).useMaterial3
                 ? Theme.of(
                     context,
-                  ).colorScheme.onSurface.withValues(alpha: 0.08)
-                : const Color(0xFF000000).withValues(alpha: 0.04),
+                  ).colorScheme.onSurface.withOpacity( 0.08)
+                : const Color(0xFF000000).withOpacity( 0.04),
             onTap: () {
               if (node.pdfBookmark != null) {
                 _handleTap(node.pdfBookmark!);

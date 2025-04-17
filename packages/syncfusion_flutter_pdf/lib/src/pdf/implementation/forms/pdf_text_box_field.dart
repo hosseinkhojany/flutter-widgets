@@ -531,8 +531,8 @@ class PdfTextBoxField extends PdfField {
           final IPdfPrimitive? mkDic = widget[PdfDictionaryProperties.mk];
           if (mkDic != null &&
               mkDic is PdfDictionary &&
-              mkDic.containsKey(PdfDictionaryProperties.r)) {
-            final IPdfPrimitive? angle = mkDic[PdfDictionaryProperties.r];
+              mkDic.containsKey(PdfDictionaryProperties.red)) {
+            final IPdfPrimitive? angle = mkDic[PdfDictionaryProperties.red];
             if (angle != null && angle is PdfNumber) {
               if (angle.value == 90) {
                 template = PdfTemplate(bounds.size.height, bounds.size.width);

@@ -184,7 +184,7 @@ class PdfActionAnnotationHelper extends PdfActionLinkAnnotationHelper {
 
   /// internal method
   void save() {
-    dictionary!.setProperty(PdfName(PdfDictionaryProperties.a),
+    dictionary!.setProperty(PdfName(PdfDictionaryProperties.alpha),
         IPdfWrapper.getElement(actionAnnotation.action!));
   }
 

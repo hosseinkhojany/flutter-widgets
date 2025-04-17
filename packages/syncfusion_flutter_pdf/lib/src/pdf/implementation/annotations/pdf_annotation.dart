@@ -1136,7 +1136,7 @@ class PdfAnnotationHelper {
   }
 
   PdfColor _getForeColor(PdfColor c) {
-    return (((c.r + c.b + c.g) / 3) > 128)
+    return (((c.red + c.blue + c.green) / 3) > 128)
         ? PdfColor(0, 0, 0)
         : PdfColor(255, 255, 255);
   }
